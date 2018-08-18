@@ -17,20 +17,20 @@ import java.io.*;
 public class Boat {
     
     private String name;
-    private String action;
+    private String command;
     private int degree = 0;
     private int speed = 0;
     private Boolean powerOn = false;
     
-    public Boat(String name, String action) {
+    public Boat(String name, String command) {
         name = this.name;
 
-        if (powerOn == false && action != "power on") {
+        if (powerOn == false && command != "power on") {
             System.out.println("Please power on your boat first.");
         }
         
         else {
-            action = this.action;
+            command = this.command;
             //Call method
         }
     }
