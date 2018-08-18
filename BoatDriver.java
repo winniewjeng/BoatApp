@@ -10,7 +10,6 @@ import java.util.Scanner;
 //
 //If the user enters a command that is not in the correct format (boatname, command),
 //a message should be displayed that the command format is invalid.
-
 public class BoatDriver {
 
     public static void main(String args[]) throws FileNotFoundException {
@@ -18,6 +17,7 @@ public class BoatDriver {
         String filename = "boat.txt";
         Scanner in;
         String[] boatArray = new String[100];
+        Boat thisBoat;
 
         try {
             in = new Scanner(new File(filename));
@@ -32,14 +32,26 @@ public class BoatDriver {
         }
 
 //            DO NOT DELETE--This code prints all the boat names inside boatArray
-            for (int i = 0; i < 5; i ++) {
-                System.out.println(boatArray[i]);
-            }
-
-        
+//            for (int i = 0; i < 5; i ++) {
+//                System.out.println(boatArray[i]);
+//            }
 //        try {} catch () {}
 
-       
+        String boatNameAndAction = "";
+        String boatName = "";
+        String action = "";
+        System.out.println("Summon the boat by entering its name and action, as seperated by a comma.");
+        System.out.println("E.g. Pequod, power on");
+        Scanner input = new Scanner(System.in);
+        boatNameAndAction = input.nextLine();
+        System.out.println(boatNameAndAction);
+        
+        
+
+//        do {
+//
+//        } while (thisBoat.powerOff() == true);
+
     }
 
 }

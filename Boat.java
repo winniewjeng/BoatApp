@@ -35,15 +35,17 @@ public class Boat {
         }
     }
     
-    void powerOn() {
+    Boolean powerOn() {
         powerOn = true;
+        return true;
     }
     
-    void powerOff() {
+    Boolean powerOff() {
         powerOn = false;
         degree = 0;
         speed = 0;
         System.out.println(name + " is powered off.");
+        return false;
     }
     
     
