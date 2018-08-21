@@ -10,7 +10,6 @@
 //attributes: name, speed, angle, and power. The Boat names should be read from a text 
 //file “boats.txt”. You can assume there will be a maximum of 100 boats in the file.
 //For testing, use the following boat names in the boats.txt file:
-
 public class Boat {
 
     private int speed;
@@ -18,6 +17,7 @@ public class Boat {
     private boolean power;
     private String name;
 
+    //Constructor
     public Boat(String aName) {
         speed = 0;
         angle = 0;
@@ -27,19 +27,19 @@ public class Boat {
 
     public void PowerOn() {
         power = true;
-        System.out.println(toString());
+        System.out.println(this);
     }
 
     public void PowerOff() {
-//        System.out.println("off now " + power);
         power = false;
-        speed = 0;
-        angle = 0;
-        System.out.println(toString());
+
+//        angle = 0;
+        System.out.println(this);
     }
 
     public void speedUp() {
         speed += 2;
+        System.out.println(this);
     }
 
     public void slowDown() {
@@ -47,17 +47,18 @@ public class Boat {
             System.out.println("Cannot slow down any more.");
         } else {
             speed -= 2;
+            System.out.println(this);
         }
     }
 
     public void turnLeft() {
         angle -= 5;
-        System.out.println(toString());
+        System.out.println(this);
     }
 
     public void turnRight() {
         angle += 5;
-        System.out.println(toString());
+        System.out.println(this);
     }
 
     public String getName() {
@@ -67,6 +68,8 @@ public class Boat {
     @Override
     public String toString() {
         if (power == false) {
+            //Reset the speed value
+            speed = 0;
             return getName() + "'s power is off";
         }
         if (speed == 0) {
