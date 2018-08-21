@@ -4,12 +4,11 @@
  * Assignment: 8
  * Created on August 17, 2018, 10:05 AM
  * Instruction: 
+ * In this project, you will create a Boat application.Each Boat has the following
+ * attributes: name, speed, angle, and power. The Boat names should be read from a text 
+ * file “boats.txt”. You can assume there will be a maximum of 100 boats in the file.
  */
 
-//In this project, you will create a Boat application.  Each Boat has the following
-//attributes: name, speed, angle, and power. The Boat names should be read from a text 
-//file “boats.txt”. You can assume there will be a maximum of 100 boats in the file.
-//For testing, use the following boat names in the boats.txt file:
 public class Boat {
 
     private int speed;
