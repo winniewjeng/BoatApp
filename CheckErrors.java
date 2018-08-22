@@ -19,7 +19,7 @@ public class CheckErrors {
     private String command;
 
     public CheckErrors() {
-        //Opening the boat.txt file
+        //Open the boat.txt file
         try {
             in = new Scanner(new File(filename));
             //populate the boatArray with all the boat names inside boat.txt
@@ -27,6 +27,8 @@ public class CheckErrors {
                 boatArrayName[boatCounter] = in.nextLine();
                 boatCounter++;
             }
+            //Close the file
+            in.close();
         } catch (FileNotFoundException e) {
             System.out.println("Could not find " + filename);
         }
